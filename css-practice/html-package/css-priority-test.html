@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试三种css添加方法优先级</title>
+    <link rel="stylesheet" href="../css-package/css-priority-test.css">
+    <style>
+        p {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 通过注释掉某一种引入css的方式来查看优先级 -->
+    <p style="color: blue;">测试该行文字ABCDEFG</p>
+    <p>测试该行文字ABCDEFG</p>
+    <!-- 结论：行内 > 内嵌 > 外部 -->
+</body>
+</html>

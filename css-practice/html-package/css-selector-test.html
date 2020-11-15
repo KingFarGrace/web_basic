@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试选择器</title>
+    <style>
+        div.pseudo a:visited {
+            color: red;
+        }
+        div.pseudo a:hover {
+            color: blue;
+        }
+        div.group h1, h2, h3 {
+            color: green;
+        }
+        div.combine>p {
+            color: purple;
+        }
+        div.attr [title=t1]{
+            color: black;
+        }
+        div.attr [title=t2] {
+            color: aqua;
+        }
+        div.attr [title=t3] {
+            color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div class="pseudo">
+        <a href="#">点击这条链接测试伪类选择器</a>
+    </div>
+    <hr>
+    <div class="group">
+        <h1>H1</h1>
+        <h2>H2</h2>
+        <h3>H3</h3>
+    </div>
+    <hr>
+    <div class="combine">
+        <p>ABC</p>
+        <p>DEF</p>
+        <p>GHI</p>
+    </div>
+    <hr>
+    <div class="attr">
+        <p title="t1">123</p>
+        <p title="t2">456</p>
+        <p title="t3">789</p>
+    </div>
+</body>
+</html>

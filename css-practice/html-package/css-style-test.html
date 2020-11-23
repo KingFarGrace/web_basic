@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一些CSS样式</title>
+    <style>
+        div.text-test p.title 
+        {
+            color: red;
+            text-align: center;
+            text-transform: capitalize;
+            line-height: 20px;
+            font-size: 50px;
+        }
+        div.text-test p.txt 
+        {
+            text-indent: 50px;
+            letter-spacing: 2px;
+            line-height: 30px;
+            font-size: 20px;
+        }
+        div.font-test h1 
+        {
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+            text-transform: capitalize;
+        }
+        div.font-test p.txt 
+        {
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            font-style: normal;
+            font-size: 20px;
+            font-weight: 100;
+            text-indent: 50px;
+            line-height: 30px;
+        }
+        div.link-test a 
+        {
+            font-size: 50px;
+            color: blue;
+        }
+        div.link-test a:visited 
+        {
+            color: brown;
+        }
+        div.link-test a:hover 
+        {
+            color: blueviolet;
+        }
+        div.table-test table 
+        {
+            width: 60%;
+            border-collapse: collapse;
+        }
+        div.table-test th, div.table-test td
+        {
+            border: 2px solid black;
+        }
+        div.table-test th
+        {
+            text-align: center;
+            text-transform: capitalize;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 50px;
+        }
+        div.table-test td
+        {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-test">
+        <p class="title">
+            this is a title
+        </p>
+        <p class="txt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi facilis recusandae cupiditate soluta sapiente placeat corporis temporibus! Ipsa, aliquam repellat? Ut, nam vel magni natus ullam recusandae voluptatem repellendus eum.
+        </p>
+    </div>
+    <hr>
+    <div class="font-test">
+        <h1>try some font style</h1>
+        <p class="txt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, nam possimus neque ullam similique consequuntur tempore sequi! Earum quasi quo eum commodi quae ab dolor sapiente ducimus voluptatum, repellat odit.
+        </p>
+    </div>
+    <hr>
+    <div class="link-test">
+        <a href="#">here is a link</a>
+    </div>
+    <hr>
+    <div class="table-test">
+        <table>
+            <tr>
+                <th>this</th>
+                <th>is a</th>
+                <th>head</th>
+            </tr>
+            <tr>
+                <td>lorem</td>
+                <td>lorem</td>
+                <td>lorem</td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+            <tr>
+                <td>,</td>
+                <td>.</td>
+                <td>/</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

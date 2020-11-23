@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Flow</title>
+    <style>
+        span
+        {
+            display: block;
+            text-transform: capitalize;
+            width: 400px;
+            height: 50px;
+            color: white;
+            background: red;
+            text-align: center;
+            line-height: 50px;
+        }
+        p
+        {
+            display: inline;
+            text-transform: capitalize;
+        }
+        a
+        {
+            display: inline-block;
+            text-transform: capitalize;
+            color: white;
+            background: red;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <span>change span from inline to block</span>
+    <hr>
+    <p>change p from block to inline</p>
+    <hr>
+    <p>ABCD <a href="#">change href from inline to inline-block</a> ABCD</p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+div
+{
+    background-color: aqua;
+}
+div.rotate-2D img
+{
+    transform: rotate(180deg);
+    /* -webkit-transform: rotate(180deg); */
+}
+div.rotate-3D img
+{
+    transform: rotateY(180deg);
+    /* -webkit-transform: rotateY(180deg); */
+}

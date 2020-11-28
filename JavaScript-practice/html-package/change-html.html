@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js change html</title>
+    <script>
+        function changeTxt()
+        {
+            document.getElementById("title").innerHTML = "This is a new title.";
+        }
+        function changeImg()
+        {
+            document.getElementById("pic").src = "../../img/Meridier.jpg";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="title">This is a title.</h1>
+    <img id="pic" src="../../img/candy.png" alt="pic" style="width: 50%; height: 50%;">
+    <hr>
+    <button type="button" onclick=changeTxt()>Press to change the title.</button>
+    <button type="button" onclick=changeImg()>Press to change the picture.</button>
+</body>
+</html>

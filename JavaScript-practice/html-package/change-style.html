@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js change style</title>
+    <style>
+        h1
+        {
+            text-transform: capitalize;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+            color: aqua;
+        }
+    </style>
+    <script>
+        function onClick() {
+            document.getElementById("title").style.color = "red";
+        }
+    </script>
+</head>
+<body>
+    <h1 id="title">this is a title.</h1>
+    <button type="button" onclick=onClick()>Press me!</button>
+</body>
+</html>

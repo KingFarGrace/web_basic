@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <script src="../js-package/js-event.js" defer=true></script>
+</head>
+<body>
+    <h1 onclick=changeTxt(this)>Click Me!</h1>
+    <button id="btn" type="button">Press me!</button>
+    <input id="ipt" type="text" onchange=onChange()>
+    <div onmouseover=moveOver(this) onmouseout=moveOut(this) style="width: 50%;">
+        Move over this block.
+    </div>
+    <img src="../../img/candy.png" alt="pic" onmouseup=mouseUp(this) onmousedown=mouseDown(this) style="width: 50%; height: 50%;">
+</body>
+</html>

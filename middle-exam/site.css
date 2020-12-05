@@ -1,0 +1,31 @@
+h1, h2, h3, h4, h5, h6
+{
+    text-transform: capitalize;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p
+{
+    text-indent: 40px;
+}
+
+#carousel1 img
+{
+    padding-left: 140px;
+    width: 1000px;
+    height: 480px;
+}
+
+#hero img
+{
+    height: 700px;
+}
+
+#hero p
+{
+    text-indent: 33px;
+    overflow: scroll; 
+    width: 380px; 
+    height: 150px;
+}

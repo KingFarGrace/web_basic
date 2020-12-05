@@ -9,4 +9,13 @@ $(document).ready(function(){
             $("h6.card-subtitle").animate({fontSize: '16px'});
         }
     );
+    var header = $("div.page-header");
+    header.hover(
+        function(){
+            header.children("h1").animate({fontSize: '60px', opacity: '0.6'});
+        }, 
+        function(){
+            header.children("h1").animate({fontSize: '40px', opacity: '1'});
+        }
+    );
 });

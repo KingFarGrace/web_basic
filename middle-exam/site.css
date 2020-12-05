@@ -28,3 +28,16 @@ p
 {
     text-indent: 33px;
 }
+
+#intro3 li
+{
+    text-align: left;
+    font-size: 16px;
+}
+
+div.page-header
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+}

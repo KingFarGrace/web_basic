@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>关于新冠疫情</title>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
     <script src="site.js"></script>
     <link rel="stylesheet" type="text/css" href="site.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
+    <div class="page-header jumbotron jumbotron-fluid">
+        <h1>新冠疫情<small></small></h1>
+    </div>
     <div class="row">
         <div class="col-lg-10">
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -32,6 +37,246 @@
                 <li class="breadcrumb-item"><a href="index.html">主页</a></li>
                 <li class="breadcrumb-item active">关于新冠疫情</li>
             </ol>
+        </div>
+    </div>
+    <div class="row pre-scrollable" style="margin-top: 10px; margin-bottom: 20px; height: 300px;">
+        <div class="col-lg-3">
+            <ul class="nav nav-pills flex-column nav-justified" role="tablist">
+                <li class="nav-item">
+                    <a href="#intro1" class="nav-link active" data-toggle="pill">什么是新冠？</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#intro2" class="nav-link" data-toggle="pill">新冠有什么危害？</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#intro3" class="nav-link" data-toggle="pill">如何预防新冠？</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-9">
+            <div class="tab-content border border-info border-top-0 border-bottom-0 rounded">
+                <div id="intro1" class="container tab-pane active">
+                    <h3>什么是新冠？</h3>
+                    <hr>
+                    <blockquote class="blockquote">
+                        <p>
+                            冠状病毒是自然界广泛存在的一类病毒，因该病毒形态在电镜下观察类似王冠而得名。
+                            目前为止发现，冠状病毒仅感染脊椎动物，可引起人和动物呼吸道、消化道和神经系统疾病。
+                            除本次发现的新型冠状病毒 (世界卫生组织已将其命名为"2019。nCoV，即2019新型冠状病毒”) 外，已知感染人的冠状病毒还有6种。
+                            其中4种在人群中较为常见，致病性较低，-般仅引起类似普通感冒的轻微呼吸道症状；另外2种是我们熟知的SARS冠状病毒和MERS冠状病毒。
+                            但这次发现的新型冠状病毒与SARS冠状病毒和MERS冠状病毒有很大不同。
+                            和人一样，不同病毒之间虽然是近亲，但性情、态度、处事都有很大不同，
+                            新型冠状病毒虽然是SARS近亲，但还未表现出SARS那么可怕的特性，因此，不必为此感到恐慌。<br>
+                        </p>
+                    </blockquote>
+                </div>
+                <div id="intro2" class="container tab-pane fade">
+                    <h3>新冠有什么危害？</h3>
+                    <hr>
+                    <blockquote class="blockquote">
+                        <p>
+                            新型冠状病毒存在人与人之间的传播，而且人传人存在潜伏期，发病的潜伏期，根据个人体质长短不一，可能是3到7天，一般不超过14天。<br>
+                            <i class="fa fa-heart" aria-hidden="true"></i> 患者一般症状有发热、乏力、干咳、逐渐出现呼吸困难。部分患者起病症状轻微，无发热。<br>
+                            <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                            严重者会出现急性呼吸窘迫综合征脓毒症休克，难以纠正的代谢性酸中毒出凝血功能障碍，多数患者为中轻症。预后良好，少数患者病情危重，甚至死亡。<br>
+                            <i class="fa fa-user-md" aria-hidden="true"></i>
+                            对于由新型冠状病毒引起的疾病，没有特效的治疗方法。但是，许多症状都可以治疗，因此可以根据患者的临床状况进行治疗。此外，对感染者的支持治疗可能非常有效。
+                        </p>
+                    </blockquote>
+                </div>
+                <div id="intro3" class="container tab-pane fade">
+                    <h3>如何预防新冠？</h3>
+                    <hr>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                            新型肺炎是近期比较流行的疾病，此病的传染性是相当强的，因此接触到患者的飞沫或者是直接和患者接触，
+                            就有极大可能感染上此病，而且此病会给患者带来很大的危害，
+                            因此一定要做好预防此病的措施，首先预防此病要从自我做起，自己要避免去人群比较密集的公共场所。
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                            在疾病流行期间最好是不要出门，如果必须出门一定要记得带好口罩，此外，外出回来后一定要记得消毒。
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                            勤洗手是预防此病的常见措施，因此一定要记得勤洗手，洗手的时候一定要用洗手液或者是香皂，
+                            这样可以将手上的病菌清洗掉，如果单纯的要水冲洗，手上的病菌是很难冲掉的。
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                            大家一定要注意卫生，不要随地吐痰，此外，大家打喷嚏或咳嗽的时候一定要用纸巾或袖肘遮住口、鼻。
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                            疫情期间大家虽然都待在家里面不能出门，但是大家也需要适量的运动，多加强身体锻炼，这样可以增强抵抗能力。
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                            如有发烧、咳嗽等呼吸道感染的症状，一定要及时就诊，去门诊的时候一定要戴好口罩。
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-success">
+        <h4 class="card-title">新冠常识问答</h4>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="accordian1" role="tablist" aria-multiselectable="true">
+                <div class="card">
+                    <div class="card-header" role="tab" id="header1">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" data-parent="#accordian1" href="#content1" aria-expanded="true"
+                                aria-controls="content1">
+                                Q: 新冠肺炎的传播途径主要是什么？
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="content1" class="collapse in" role="tabpanel" aria-labelledby="header1">
+                        <div class="card-body text-center">
+                            A: 呼吸道飞沫传播和接触传播。
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="header2">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" data-parent="#accordian1" href="#content2"
+                                aria-expanded="true" aria-controls="content2">
+                                Q: 如何杀灭新型冠状病毒？
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="content2" class="collapse in" role="tabpanel" aria-labelledby="header2">
+                        <div class="card-body text-center">
+                            A: 在56摄氏度，30分钟条件下使用医用酒精或含氯消毒剂进行杀菌。
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="header3">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" data-parent="#accordian1" href="#content3"
+                                aria-expanded="true" aria-controls="content3">
+                                Q: 对确诊病例、疑似病例和无症状感染者的哪些措施是控制新冠肺炎等传染病流行的关键措施？
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="content3" class="collapse in" role="tabpanel" aria-labelledby="header3">
+                        <div class="card-body text-center">
+                            A: 早发现，早报告，早隔离，早治疗。
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="header4">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" data-parent="#accordian1" href="#content4"
+                                aria-expanded="true" aria-controls="content4">
+                                Q: 如何预防新冠肺炎？
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="content4" class="collapse in" role="tabpanel" aria-labelledby="header4">
+                        <div class="card-body text-center">
+                            A: 勤洗手，避免用不干净的手接触口鼻眼；咳嗽、打喷嚏时应当主动避开他人；避开人员密集场所。
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="header5">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" data-parent="#accordian1" href="#content5"
+                                aria-expanded="true" aria-controls="content5">
+                                Q: 疑似新冠到医院就诊时，应当向医务人员汇报哪几项内容？
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="content5" class="collapse in" role="tabpanel" aria-labelledby="header5">
+                        <div class="card-body text-center">
+                            A: 近期旅行史，近期接触史，近期居住史。
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="header6">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" data-parent="#accordian1" href="#content6"
+                                aria-expanded="true" aria-controls="content6">
+                                Q: 哪种口罩不能隔离新冠病毒？
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="content6" class="collapse in" role="tabpanel" aria-labelledby="header6">
+                        <div class="card-body text-center">
+                            A: 棉布口罩。
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="header7">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" data-parent="#accordian1" href="#content7"
+                                aria-expanded="true" aria-controls="content7">
+                                Q: 如何正确使用口罩？
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="content7" class="collapse in" role="tabpanel" aria-labelledby="header7">
+                        <div class="card-body text-center">
+                            A: 每2-4小时就更换一次，一旦污染，应当第一时间更换，佩戴时，避免手接触口罩内面。
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="header8">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" data-parent="#accordian1" href="#content8"
+                                aria-expanded="true" aria-controls="content8">
+                                Q: 室内应当保持通风吗？
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="content8" class="collapse in" role="tabpanel" aria-labelledby="header8">
+                        <div class="card-body text-center">
+                            A: 应当，且每次从室外进入室内都应当进行5~10分钟的通风。
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="header9">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" data-parent="#accordian1" href="#content9"
+                                aria-expanded="true" aria-controls="content9">
+                                Q: 接触疑似传染新型冠状病毒肺炎的人员和临床诊断病人的医务人员，脱离隔离区后应进行多长时间的观察？
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="content9" class="collapse in" role="tabpanel" aria-labelledby="header9">
+                        <div class="card-body text-center">
+                            A: 2周。
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="header10">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" data-parent="#accordian1" href="#content10"
+                                aria-expanded="true" aria-controls="content10">
+                                Q: 如何在家中自我隔离？
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="content10" class="collapse in" role="tabpanel" aria-labelledby="header10">
+                        <div class="card-body text-center">
+                            A: 和家人保持一米远的距离，每天清洁所有高频接触的物体表面，隔离期间多饮水。
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -55,7 +300,8 @@
             </ol>
         </div>
     </div>
-    <div class="jumbotron jumbotron-fluid text-center" style="margin-bottom: 0px; padding-top: 20px; padding-bottom: 20px;">
+    <div class="jumbotron jumbotron-fluid text-center"
+        style="margin-bottom: 0px; padding-top: 20px; padding-bottom: 20px;">
         <cite>
             Author: <a href="https://github.com/KingFarGrace">KingFarGrace</a><br>
             Department: 控制与计算机工程学院<br>
@@ -65,4 +311,5 @@
         </cite>
     </div>
 </body>
+
 </html>

@@ -12,20 +12,19 @@ p
 
 #carousel1 img
 {
-    padding-left: 140px;
     width: 1000px;
     height: 480px;
+    margin: auto;
 }
 
 #hero img
 {
     height: 700px;
+    width: 400px;
+    margin: auto;
 }
 
 #hero p
 {
     text-indent: 33px;
-    overflow: scroll; 
-    width: 380px; 
-    height: 150px;
 }

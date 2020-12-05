@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>主页</title>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
     <script src="site.js"></script>
     <link rel="stylesheet" type="text/css" href="site.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
@@ -81,7 +82,7 @@
             </div>
         </div>
     </div>
-    <div class="card bg-light">
+    <div class="card bg-light" id="hero-profile">
       <div class="card-body" style="margin-top: 10px;">
         <h4 class="card-title">新冠防疫工作杰出贡献者</h4>
         <h6 class="card-subtitle text-muted">——哪有什么岁月静好，不过是有人在替你负重前行。</h6>
@@ -143,35 +144,40 @@
             </div>
         </div>
     </div>
-    <blockquote class="blockquote" style="padding-top: 20px; padding-bottom: 30px;">
-        <pre class="">
-            新冠肺炎疫情，是新中国成立以来在我国发生的传播速度<mark>最快</mark>、感染范围<mark>最广</mark>、防控难度<mark>最大</mark>的一次重大突发公共卫生事件。
-
-            <h5>“沧海横流，方显英雄本色。”</h5>
-            
-            在这场严峻斗争中，各级党组织和广大党员、干部冲锋在前、英勇奋战，广大医务工作者白衣执甲、逆行出征，人民解放军指战员闻令即动、勇挑重担，
-            
-            广大社区工作者、公安干警、基层干部、下沉干部、志愿者不惧风雨、坚守一线，广大群众众志成城、踊跃参与，涌现出一大批可歌可泣的先进典型和感人事迹，钟南山、张伯礼、张定宇、陈薇就是其中的杰出代表。
-
-            崇尚英雄才会产生英雄，争做英雄才能英雄辈出。隆重表彰他们，目的是弘扬他们的崇高品质。
-
-            2019年9月29日，在国家勋章和国家荣誉称号颁授仪式上，习近平对英雄模范的三种崇高品质作了生动阐释。
-            
-            <h5>——忠诚</h5>
-            就是英雄模范们都对党和人民事业矢志不渝、百折不挠，坚守一心为民的理想信念，坚守为中国人民谋幸福、为中华民族谋复兴的初心使命，用一生的努力谱写了感天动地的英雄壮歌。
-
-            <h5>——执着</h5>
-            就是英雄模范们都在党和人民最需要的地方冲锋陷阵、顽强拼搏，几十年如一日埋头苦干，为国为民奉献的志向坚定不移，对事业的坚守无怨无悔，为民族复兴拼搏奋斗的赤子之心始终不改。
-
-            <h5>——朴实</h5>
-            就是英雄模范们都在平凡的工作岗位上忘我工作、无私奉献，不计个人得失，舍小家顾大家，具有功成不必在我、功成必定有我的崇高精神，其中很多同志都是做隐姓埋名人、干惊天动地事的典型，展现了一种伟大的无我境界。<hr>
-
-            经过全国上下共同努力，目前我国疫情防控取得重大战略成果，在疫情防控和经济恢复上都走在世界前列。这是千千万万英雄模范和广大人民群众一起拼出来、干出来的。
-
-            英雄模范们用行动再次证明，伟大出自平凡，平凡造就伟大。习近平曾说，只要有坚定的理想信念、不懈的奋斗精神，脚踏实地把每件平凡的事做好，一切平凡的人都可以获得不平凡的人生，一切平凡的工作都可以创造不平凡的成就。
-        </pre>
-        <footer class="blockquote-footer pull-right">引用自新华社报道。</footer>
-    </blockquote>
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <blockquote class="blockquote" style="padding-top: 20px; padding-bottom: 30px;">
+                <pre>
+新冠肺炎疫情，是新中国成立以来在我国发生的传播速度<mark>最快</mark>、感染范围<mark>最广</mark>、防控难度<mark>最大</mark>的一次重大突发公共卫生事件。
+        
+<h5>“沧海横流，方显英雄本色。”</h5>
+                    
+在这场严峻斗争中，各级党组织和广大党员、干部冲锋在前、英勇奋战，广大医务工作者白衣执甲、逆行出征，人民解放军指战员闻令即动、勇挑重担，
+                    
+广大社区工作者、公安干警、基层干部、下沉干部、志愿者不惧风雨、坚守一线，广大群众众志成城、踊跃参与，涌现出一大批可歌可泣的先进典型和感人事迹，钟南山、张伯礼、张定宇、陈薇就是其中的杰出代表。
+        
+崇尚英雄才会产生英雄，争做英雄才能英雄辈出。隆重表彰他们，目的是弘扬他们的崇高品质。
+        
+2019年9月29日，在国家勋章和国家荣誉称号颁授仪式上，习近平对英雄模范的三种崇高品质作了生动阐释。
+                    
+<h5>——忠诚</h5>
+就是英雄模范们都对党和人民事业矢志不渝、百折不挠，坚守一心为民的理想信念，坚守为中国人民谋幸福、为中华民族谋复兴的初心使命，用一生的努力谱写了感天动地的英雄壮歌。
+        
+<h5>——执着</h5>
+就是英雄模范们都在党和人民最需要的地方冲锋陷阵、顽强拼搏，几十年如一日埋头苦干，为国为民奉献的志向坚定不移，对事业的坚守无怨无悔，为民族复兴拼搏奋斗的赤子之心始终不改。
+        
+<h5>——朴实</h5>
+就是英雄模范们都在平凡的工作岗位上忘我工作、无私奉献，不计个人得失，舍小家顾大家，具有功成不必在我、功成必定有我的崇高精神，其中很多同志都是做隐姓埋名人、干惊天动地事的典型，展现了一种伟大的无我境界。
+<hr>
+        
+经过全国上下共同努力，目前我国疫情防控取得重大战略成果，在疫情防控和经济恢复上都走在世界前列。这是千千万万英雄模范和广大人民群众一起拼出来、干出来的。
+        
+英雄模范们用行动再次证明，伟大出自平凡，平凡造就伟大。习近平曾说，只要有坚定的理想信念、不懈的奋斗精神，脚踏实地把每件平凡的事做好，一切平凡的人都可以获得不平凡的人生，一切平凡的工作都可以创造不平凡的成就。
+                </pre>
+                <footer class="blockquote-footer pull-right">引用自新华社报道。</footer>
+            </blockquote>
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg-10">
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark">

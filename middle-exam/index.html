@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="site.js"></script>
+    <link rel="stylesheet" type="text/css" href="site.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid text-center display-3" style="margin-bottom: 0px;">北京市疫情防控情况介绍</div>
+    <div class="row">
+        <div class="col-lg-10">
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <a class="navbar-brand" href="#">导航栏</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="topic1.html">关于新冠疫情</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="topic2.html">关于北京市防疫工作</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-2">
+            <ol class="breadcrumb bg-white pull-left">
+                <li class="breadcrumb-item"><a href="#">主页</a></li>
+                <li class="breadcrumb-item active"></li>
+            </ol>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 30px;">
+        <div class="col-lg-4 border border-top-0 border-info rounded" style="overflow:scroll; width:400px; height:485px;">
+            <h2>北京市疫情防控近况</h2>
+            <hr>
+            <blockquote class="blockquote">
+                <h4>市卫生健康委：加强督促检查 全力做好冬春季院感防控</h4>
+                <p>
+                    近日，国内多地相继出现本地确诊病例，冷链外包装也多次检出新冠病毒，医疗救治和防院感组持续开展医疗机构感染防控检查、督查、排查、调查，全力做好院感防控工作。
+                    一是组织开展院感防控全面检查；二是对检查中发现的问题约谈相关负责人；三是及时开展中高风险地区来京人员就诊排查；四是开展发热门诊建设现场调查。
+                    下一步，医疗救治和防院感组将继续督促医疗机构持续做好自查，组织专家与监督机构持续开展巡回式督查，根据疫情形势适时调整监督检查频次和范围，确保医疗机构将感染防控措施落到实处。
+                </p>
+                <footer class="blockquote-footer">引用自首都之窗官网</footer>
+                <p>
+                    <a class="btn btn-info btn-large pull-right" href="http://www.beijing.gov.cn/ywdt/gzdt/202012/t20201201_2154674.html">参看更多 &raquo;</a>
+                </p>
+            </blockquote>
+        </div>
+        <div class="col-lg-8">
+            <div id="carousel1" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel1" data-slide-to="1"></li>
+                    <li data-target="#carousel1" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img src="figures/疫情图片1.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="figures/疫情图片2.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="figures/疫情图片3.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
+                    <i class="fa fa-chevron-circle-left" style="font-size:48px;color:aqua"></i>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next">
+                    <i class="fa fa-chevron-circle-right" style="font-size:48px;color:aqua"></i>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="card bg-light" id="hero-profile">
+        <div class="card-body" style="margin-top: 10px;">
+            <h4 class="card-title">新冠防疫工作杰出贡献者</h4>
+            <h6 class="card-subtitle text-muted">——哪有什么岁月静好，不过是有人在替你负重前行。</h6>
+        </div>
+    </div>
+    <div class="row" id="hero" style="margin-top: 30px; margin-bottom: 30px;">
+        <div class="col-lg-3">
+            <div class="card">
+                <img class="card-img-top" src="figures/钟南山.jpg" alt="钟南山">
+                <div class="card-body">
+                    <h4 class="card-title">钟南山</h4>
+                    <p class="card-text">
+                        钟南山长期致力于重大呼吸道传染病及慢性呼吸系统疾病的研究、预防与治疗，成果丰硕，实绩突出。
+                        新冠肺炎疫情发生后，他敢医敢言，提出存在“人传人”现象，强调严格防控，领导撰写新冠肺炎诊疗方案，
+                        在疫情防控、重症救治、科研攻关等方面作出杰出贡献。荣获国家科学技术进步奖一等奖和“全国先进工作者”“改革先锋”等称号。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card"">
+                <img class="card-img-top" src="figures/张伯礼.jpg" alt="张伯礼">
+                <div class="card-body">
+                    <h4 class="card-title">张伯礼</h4>
+                    <p class="card-text">
+                        张伯礼长期致力于中医药现代化研究，奠定中医素质教育和国际教育的标准化工作基础，推动中医药事业传承创新发展。
+                        新冠肺炎疫情发生后，他主持研究制定中西医结合救治方案，指导中医药全过程介入新冠肺炎救治，取得显著成效，
+                        为疫情防控作出重大贡献。荣获国家科学技术进步奖一等奖和“全国优秀共产党员”“全国先进工作者”等称号。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card">
+                <img class="card-img-top" src="figures/张定宇.jpg" alt="张定宇">
+                <div class="card-body">
+                    <h4 class="card-title">张定宇</h4>
+                    <p class="card-text">
+                        张定宇长期在医疗一线工作，曾带队赴汶川抗震救灾，多次参加国际医疗援助。
+                        2019年12月29日，在收治首批7名不明原因肺炎患者后，他立即组建隔离病区，率先采集样本开展病毒检测，
+                        组织动员遗体捐献，为确认新冠病毒赢得了时间，为开展新冠肺炎病理研究创造了条件。作为渐冻症患者，
+                        他冲锋在前，身先士卒，带领金银潭医院干部职工共救治2800余名新冠肺炎患者，
+                        为打赢湖北保卫战、武汉保卫战作出重大贡献。荣获“全国卫生健康系统新冠肺炎疫情防控工作先进个人”称号。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card">
+                <img class="card-img-top" src="figures/陈薇.jpg" alt="陈薇">
+                <div class="card-body">
+                    <h4 class="card-title">陈薇</h4>
+                    <p class="card-text">
+                        陈薇长期致力于生物危害防控研究，研制出我军首个SARS预防生物新药“重组人干扰素ω”、全球首个获批新药证书的埃博拉疫苗。
+                        新冠肺炎疫情发生后，她闻令即动，紧急奔赴武汉执行科研攻关和防控指导任务，在基础研究、疫苗、防护药物研发方面取得重大成果，
+                        为疫情防控作出重大贡献。荣获“全军防治非典先进个人”“全国十大杰出青年”等称号。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <blockquote class="blockquote" style="padding-top: 20px; padding-bottom: 30px;">
+                <pre>
+新冠肺炎疫情，是新中国成立以来在我国发生的传播速度<mark>最快</mark>、感染范围<mark>最广</mark>、防控难度<mark>最大</mark>的一次重大突发公共卫生事件。
+        
+<h5>“沧海横流，方显英雄本色。”</h5>
+                    
+在这场严峻斗争中，各级党组织和广大党员、干部冲锋在前、英勇奋战，广大医务工作者白衣执甲、逆行出征，人民解放军指战员闻令即动、勇挑重担，
+                    
+广大社区工作者、公安干警、基层干部、下沉干部、志愿者不惧风雨、坚守一线，广大群众众志成城、踊跃参与，涌现出一大批可歌可泣的先进典型和感人事迹，钟南山、张伯礼、张定宇、陈薇就是其中的杰出代表。
+        
+崇尚英雄才会产生英雄，争做英雄才能英雄辈出。隆重表彰他们，目的是弘扬他们的崇高品质。
+        
+2019年9月29日，在国家勋章和国家荣誉称号颁授仪式上，习近平对英雄模范的三种崇高品质作了生动阐释。
+                    
+<h5>——忠诚</h5>
+就是英雄模范们都对党和人民事业矢志不渝、百折不挠，坚守一心为民的理想信念，坚守为中国人民谋幸福、为中华民族谋复兴的初心使命，用一生的努力谱写了感天动地的英雄壮歌。
+        
+<h5>——执着</h5>
+就是英雄模范们都在党和人民最需要的地方冲锋陷阵、顽强拼搏，几十年如一日埋头苦干，为国为民奉献的志向坚定不移，对事业的坚守无怨无悔，为民族复兴拼搏奋斗的赤子之心始终不改。
+        
+<h5>——朴实</h5>
+就是英雄模范们都在平凡的工作岗位上忘我工作、无私奉献，不计个人得失，舍小家顾大家，具有功成不必在我、功成必定有我的崇高精神，其中很多同志都是做隐姓埋名人、干惊天动地事的典型，展现了一种伟大的无我境界。
+<hr>
+        
+经过全国上下共同努力，目前我国疫情防控取得重大战略成果，在疫情防控和经济恢复上都走在世界前列。这是千千万万英雄模范和广大人民群众一起拼出来、干出来的。
+        
+英雄模范们用行动再次证明，伟大出自平凡，平凡造就伟大。习近平曾说，只要有坚定的理想信念、不懈的奋斗精神，脚踏实地把每件平凡的事做好，一切平凡的人都可以获得不平凡的人生，一切平凡的工作都可以创造不平凡的成就。
+                </pre>
+                <footer class="blockquote-footer pull-right">引用自新华社报道。</footer>
+            </blockquote>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10">
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <a class="navbar-brand" href="#">导航栏</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="topic1.html">关于新冠疫情</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="topic2.html">关于北京市防疫工作</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-2">
+            <ol class="breadcrumb bg-white pull-left" style="margin-bottom: 0px;">
+                <li class="breadcrumb-item"><a href="#">主页</a></li>
+                <li class="breadcrumb-item active"></li>
+            </ol>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid text-center" style="margin-bottom: 0px; padding-top: 20px; padding-bottom: 20px;">
+        <cite>
+            Author: <a href="https://github.com/KingFarGrace">KingFarGrace</a><br>
+            Department: 控制与计算机工程学院<br>
+            Class: 软件1802 <br>
+            Id: 120181080602 <br><br>
+            Copyright © 2020 KingFarGrace All rights reserved.
+        </cite>
+    </div>
+</body>
+</html>

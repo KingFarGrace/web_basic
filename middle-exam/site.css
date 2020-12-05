@@ -1,0 +1,48 @@
+body
+{
+    background-image: url("figures/timg.jpg");
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    text-transform: capitalize;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p
+{
+    text-indent: 40px;
+}
+
+#carousel1 img
+{
+    width: 1000px;
+    height: 480px;
+    margin: auto;
+}
+
+#hero img
+{
+    height: 700px;
+    width: 400px;
+    margin: auto;
+}
+
+#hero p
+{
+    text-indent: 33px;
+}
+
+#intro3 li
+{
+    text-align: left;
+    font-size: 16px;
+}
+
+div.page-header
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+}

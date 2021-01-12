@@ -1,15 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    
+    <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+        <a class="navbar-brand" href="#">导航栏</a>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">回到首页</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="add.html">添加记录</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="update.html">修改记录</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="query.html">查询记录</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="delete.html">删除记录</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container mt-3">
+            <h2>添加一条学生信息</h2>
+            <form action="http://localhost:3000/students" method="POST" class="mt-5">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">学号</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请输入学生学号（不能重复）" id="id" name="id">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">姓名</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请输入学生姓名" id="name" name="name">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">年龄</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请输入学生年龄" id="age" name="age">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">所在班号</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请输入学生所在班号" id="classId" name="classId">
+                </div>
+                <button type="submit" class="btn btn-primary">提交</button>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>

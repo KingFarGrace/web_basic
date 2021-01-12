@@ -1,15 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        code {
+            background-color: lightgrey;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+        <a class="navbar-brand" href="#">导航栏</a>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">回到首页</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="add.html">添加记录</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="update.html">修改记录</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="query.html">查询记录</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="delete.html">删除记录</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="jumbotron">
+        <div class="container">
+            <h2>使用json-server提供后端api实现增删改查功能</h2>
+            <div class="card" style="margin-top: 30px;">
+                <div class="card-footer"></div>
+                <div class="card-header">
+                    <h3>如何启动该项目？</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            1. 在本地使用 npm 安装 json-server，控制台输入命令 <code>npm install json-server -g</code>；
+                        </li>
+                        <li class="list-group-item">
+                            2. 进入当前目录为 task1_json_server，控制台输入命令 <code>json-server --watch db.json</code> 启动服务；
+                        </li>
+                        <li class="list-group-item">
+                            3. 第二步完成服务启动后，即可通过api进行交互，具体使用方法见下面部分。
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer"></div>
+                <div class="card-header">
+                    <h3>关于后端api</h3>
+                </div>
+                <div class="card-body">内容</div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

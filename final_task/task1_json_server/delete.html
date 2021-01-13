@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">   
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer=true>
+        $(() => {
+            $("#delete").click(() => {
+                let id = $("#id").val();
+                axios.delete("http://localhost:3000/students/" + id)
+                .then(res => {
+                    alert("删除成功！");
+                    console.log("success:" + res);
+                })
+                .catch(e => {
+                    alert("删除失败！");
+                    console.log("error:" + e);
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-sm bg-success navbar-dark">
@@ -34,14 +51,14 @@
     <div class="jumbotron">
         <div class="container mt-3">
             <h2>删除一条学生信息</h2>
-            <form action="http://localhost:3000/students" method="DELETE" class="mt-5">
+            <form class="mt-5">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text">学号</span>
                     </div>
                     <input type="text" class="form-control" placeholder="请输入要删除的学生学号" id="id" name="id">
                 </div>
-                <button type="submit" class="btn btn-primary">删除</button>
+                <a type="submit" class="btn btn-primary" id="delete">删除</a>
             </form>
         </div>
     </div>

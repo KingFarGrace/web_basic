@@ -9,6 +9,30 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script defer=true>
+        $(() => {
+            $("#add").click(() => {
+                let json = {};
+                json['id'] = $("#id").val();
+                json['name'] = $("#name").val();
+                json['age'] = $("#age").val();
+                json['classId'] = $("#classId").val();
+                $.ajax({
+                    url: "http://localhost:3000/students",
+                    method: "post",
+                    data: json,
+                    success: (data, status) => {
+                        alert("添加成功！");
+                        console.log("success:" + data);
+                    },
+                    error: (xhr, status, error) => {
+                        alert("添加失败！");
+                        console.log("error" + error);
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -36,7 +60,7 @@
     <div class="jumbotron">
         <div class="container mt-3">
             <h2>添加一条学生信息</h2>
-            <form action="http://localhost:3000/students" method="POST" class="mt-5">
+            <form class="mt-5" id="addForm">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text">学号</span>
@@ -61,7 +85,7 @@
                     </div>
                     <input type="text" class="form-control" placeholder="请输入学生所在班号" id="classId" name="classId">
                 </div>
-                <button type="submit" class="btn btn-primary">提交</button>
+                <a type="submit" class="btn btn-primary" id="add">提交</a>
             </form>
         </div>
     </div>

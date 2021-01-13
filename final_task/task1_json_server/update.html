@@ -8,6 +8,31 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">   
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer=true>
+        $(() => {
+            $("#update").click(() => {
+                let id = $("#id").val();
+                let name = $("#name").val();
+                let age = $("#age").val();
+                let classId = $("#classId").val();
+                axios.put("http://localhost:3000/students/" + id, {
+                    id,
+                    name,
+                    age,
+                    classId
+                })
+                .then(res => {
+                    alert("修改成功！");
+                    console.log("success");
+                })
+                .catch(e => {
+                    alert("修改失败！");
+                    console.log("error:" + e);
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-sm bg-success navbar-dark">
@@ -34,7 +59,7 @@
     <div class="jumbotron">
         <div class="container mt-3">
             <h2>更新一条学生信息</h2>
-            <form action="http://localhost:3000/students" method="PUT" class="mt-5">
+            <form class="mt-5">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text">学号</span>
@@ -59,7 +84,7 @@
                     </div>
                     <input type="text" class="form-control" placeholder="请输入新班号" id="classId" name="classId">
                 </div>
-                <button type="submit" class="btn btn-primary">更新</button>
+                <a type="submit" class="btn btn-primary" id="update">更新</a>
             </form>
         </div>
     </div>

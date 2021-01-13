@@ -62,7 +62,214 @@
                 <div class="card-header">
                     <h3>关于后端api</h3>
                 </div>
-                <div class="card-body">内容</div>
+                <div class="card-body">
+                    后端使用json-server搭建虚拟服务器，并存有一批学生信息供前端进行服务请求，支持添加、修改、查询和删除四种服务，具体如下：
+                    <div id="accordian1" role="tablist" aria-multiselectable="true" class="mt-3">
+                        <div class="card">
+                            <div class="card-header" role="tab" id="header1">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" data-parent="#accordian1" href="#content1"
+                                        aria-expanded="true" aria-controls="content1">
+                                        学生数据结构
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="content1" class="collapse in" role="tabpanel" aria-labelledby="header1">
+                                <div class="card-body text-left">
+                                    学生假数据使用json存储，包含四个字段：<br>
+                                    <code>id:</code> 学生学号；<br>
+                                    <code>name:</code> 学生姓名；<br>
+                                    <code>age:</code> 学生年龄；<br>
+                                    <code>classId:</code> 学生所在班；<br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="header2">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" data-parent="#accordian1" href="#content2"
+                                        aria-expanded="true" aria-controls="content2">
+                                        添加学生信息接口
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="content2" class="collapse in" role="tabpanel" aria-labelledby="header2">
+                                <div class="card-body text-left">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <td>作用描述</td>
+                                                <td>使用 <code>$.ajax</code> 将封装为json的表单数据传送给后端，并添加到后端数据集中。</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>url</td>
+                                                <td><code>http://localhost:3000/students</code></td>
+                                            </tr>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <td>请求方式</td>
+                                                <td><code>POST</code></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td><code>{ "id": "学生学号", "name": "学生姓名", "age": "学生年龄", "classId": "学生所在班号" }</code></td>
+                                            </tr>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <td>返回数据</td>
+                                                <td>\</td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="header2">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" data-parent="#accordian1" href="#content3"
+                                        aria-expanded="true" aria-controls="content2">
+                                        修改学生信息接口
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="content3" class="collapse in" role="tabpanel" aria-labelledby="header2">
+                                <div class="card-body text-left">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <td>作用描述</td>
+                                                <td>使用 <code>axios</code> 将封装为json的表单数据传送给后端，并通过url中附带的id参数匹配后端数据并进行修改。</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>url</td>
+                                                <td><code>http://localhost:3000/students/:id</code></td>
+                                            </tr>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <td>请求方式</td>
+                                                <td><code>PUT</code></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>传入参数</td>
+                                                <td><code>{ "id": "学生学号", "name": "学生姓名", "age": "学生年龄", "classId": "学生所在班号" }</code></td>
+                                            </tr>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <td>返回数据</td>
+                                                <td>\</td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="header2">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" data-parent="#accordian1" href="#content4"
+                                        aria-expanded="true" aria-controls="content2">
+                                        查询学生信息接口
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="content4" class="collapse in" role="tabpanel" aria-labelledby="header2">
+                                <div class="card-body text-left">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <td>作用描述</td>
+                                                <td>使用 <code>$.ajax</code> 将封装为json的表单数据传送给后端，并通过url中附带的id参数查询匹配项。</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>url</td>
+                                                <td><code>http://localhost:3000/students/:id</code></td>
+                                            </tr>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <td>请求方式</td>
+                                                <td><code>GET</code></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>传入参数</td>
+                                                <td><code>{ "id": "学生学号" }</code></td>
+                                            </tr>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <td>返回数据</td>
+                                                <td><code>{ "id": "学生学号", "name": "学生姓名", "age": "学生年龄", "classId": "学生所在班号" }</code></td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" role="tab" id="header2">
+                                <h5 class="mb-0">
+                                    <a data-toggle="collapse" data-parent="#accordian1" href="#content5"
+                                        aria-expanded="true" aria-controls="content2">
+                                        删除学生信息接口
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="content5" class="collapse in" role="tabpanel" aria-labelledby="header2">
+                                <div class="card-body text-left">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <td>作用描述</td>
+                                                <td>使用 <code>axios</code> 将id附加到url上，并从后端数据集中删除匹配项。</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>url</td>
+                                                <td><code>http://localhost:3000/students/:id</code></td>
+                                            </tr>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <td>请求方式</td>
+                                                <td><code>DELETE</code></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>传入参数</td>
+                                                <td><code>id（非json）</code></td>
+                                            </tr>
+                                        </tbody>
+                                        <thead>
+                                            <tr>
+                                                <td>返回数据</td>
+                                                <td>\</td>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

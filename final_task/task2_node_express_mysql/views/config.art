@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配置数据库连接</title>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer=true>
+        $(() => {
+            $("#config").click(() => {
+                let host = $("#host").val();
+                let port = $("#port").val();
+                let user = $("#user").val();
+                let password = $("#password").val();
+                let database = $("#database").val();
+                axios.post("http://localhost:3000/setConfig", {
+                    host,
+                    port,
+                    user,
+                    password,
+                    database
+                })
+                .then(res => {
+                    alert("配置成功！");
+                    console.log("success:" + res);
+                })
+                .catch(e => {
+                    alert("配置失败！");
+                    console.log("error:" + e);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+        <a class="navbar-brand" href="#">导航栏</a>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">回到首页</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="add">添加记录</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="update">修改记录</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="query">查询记录</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="delete">删除记录</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">配置数据库连接</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container mt-3">
+            <h2>配置数据库连接信息</h2>
+            <form class="mt-5" id="addForm">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">host</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请输入服务器url" id="host" name="host">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">port</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请输入数据库所用端口" id="port" name="port">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">user</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请输入数据库用户名" id="user" name="user">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">password</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请输入数据库用户密码" id="password" name="password">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">database</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请输入数据库名" id="database" name="database">
+                </div>
+                <a type="submit" class="btn btn-primary" id="config">提交</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>查询学生信息</title>
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer=true>
+        $(() => {
+            $("#query").click(() => {
+                let id = $("#id").val();
+                axios.post("http://localhost:3000/query", {
+                    id
+                })
+                .then(res => {
+                    if (res.data.msg) {
+                        alert(res.data.msg)
+                    } else {
+                        let data = res.data
+                        $("#resId").html("<b>" + data.id + "</b>");
+                        $("#name").html("<b>" + data.name + "</b>");
+                        $("#age").html("<b>" + data.age + "</b>");
+                        $("#sex").html("<b>" + data.sex + "</b>");
+                        $("#clazz").html("<b>" + data.clazz + "</b>");
+                        console.log("success:" + JSON.stringify(data));
+                    }
+                })
+                .catch(e => {
+                    alert(res.data.msg);
+                    console.log("error:" + e);
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+        <a class="navbar-brand" href="#">导航栏</a>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">回到首页</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="add">添加记录</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="update">修改记录</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">查询记录</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="delete">删除记录</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="config">配置数据库连接</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container mt-3">
+            <h2>查询一条学生信息</h2>
+            <form class="mt-5">
+                <div class="row">
+                    <div class="col-10">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">学号</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="请输入学生学号进行查询" id="id" name="id">
+                        </div>
+                    </div>
+                    <div class="col-2"><a type="submit" class="btn btn-primary" id="query">查询</a></div>
+                </div>
+            </form>
+        </div>
+
+        <div class="container">
+            <h2>查询所得信息</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>学号</th>
+                        <th>姓名</th>
+                        <th>年龄</th>
+                        <th>性别</th>
+                        <th>班级</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="resId"></td>
+                        <td id="name"></td>
+                        <td id="age"></td>
+                        <td id="sex"></td>
+                        <td id="clazz"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
